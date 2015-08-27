@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected Button enterButton;
     private EditText emailTextInput;
     private EditText passwordTextInput;
-//    private String email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
