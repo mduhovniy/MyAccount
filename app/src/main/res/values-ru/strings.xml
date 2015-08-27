@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Калькулятор</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="menu_clear">Clear</string>
+    <string name="menu_exit">Exit</string>
+    <string name="enterPoint">Поехали!</string>
+</resources>
