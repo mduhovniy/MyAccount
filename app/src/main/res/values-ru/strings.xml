@@ -1,8 +1,21 @@
 <resources>
-    <string name="app_name">Калькулятор</string>
+    <string name="app_name">Моя Учетная Запись</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Настройки</string>
     <string name="menu_clear">Clear</string>
     <string name="menu_exit">Exit</string>
     <string name="enterPoint">Поехали!</string>
+    <string name="menuHeader">Главное Меню</string>
+    <string name="calculator">Калькулятор</string>
+    <string name="album">Альбом</string>
+    <string name="changePassword">Смена Пароля</string>
+    <string name="passRequest">Введите новый пароль:</string>
+    <string name="passRepeat">Повторите ввод</string>
+    <string name="goInternet">Поиск Google</string>
+    <string name="goPhone">Позвонить</string>
+    <string name="goEmail">Отправить Email</string>
+    <string name="goSms">Отправить СМС</string>
+    <string name="goWhatsApp">Сообщение WhatsApp</string>
+    <string name="goCamera">Камера</string>
+    <string name="goSettings">Натройки</string>
 </resources>

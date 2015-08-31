@@ -1,7 +1,20 @@
 <resources>
-    <string name="app_name">מחשבון</string>
+    <string name="app_name">החשבון שלי</string>
 
     <string name="action_settings">Settings</string>
     <string name="menu_clear">Clear</string>
     <string name="menu_exit">Exit</string>
+    <string name="menuHeader">תפריט ראשי</string>
+    <string name="calculator">מחשבון</string>
+    <string name="album">אלבום</string>
+    <string name="changePassword">New Button</string>
+    <string name="passRequest">New Password</string>
+    <string name="passRepeat">New Password 2</string>
+    <string name="goInternet">New Button</string>
+    <string name="goPhone">New Button</string>
+    <string name="goEmail">New Button</string>
+    <string name="goSms">New Button</string>
+    <string name="goWhatsApp">New Button</string>
+    <string name="goCamera">New Button</string>
+    <string name="goSettings">New Button</string>
 </resources>

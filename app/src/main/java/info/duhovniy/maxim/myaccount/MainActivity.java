@@ -12,10 +12,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public static String userName = "maxim.duhovniy@gmail.com";
-    public static String userPassword = "hello";
+    private String userName = "maxim";
+    private String userPassword = "hello";
 
-    protected Button enterButton;
+    private Button enterButton;
     private EditText emailTextInput;
     private EditText passwordTextInput;
 
@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        if(intent.hasExtra("info.duhovniy.maxim.newPassword"))
+            userPassword = intent.getStringExtra("info.duhovniy.maxim.newPassword");
 
         enterButton = (Button) findViewById(R.id.enterButton);
         emailTextInput = (EditText) findViewById(R.id.editEmail);
@@ -56,12 +60,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(String.valueOf(emailTextInput.getText()).equals(userName) && String
-                .valueOf(passwordTextInput.getText()).equals(userPassword)) {
-            Intent intent = new Intent(MainActivity.this, Calculator.class);
+        if(String.valueOf(emailTextInput.getText()).equals(userName) &&
+                String.valueOf(passwordTextInput.getText()).equals(userPassword)) {
+            Intent intent = new Intent(MainActivity.this, MainMenu.class);
             startActivity(intent);
         } else {
             Toast.makeText(getApplicationContext(), "Try again)", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void SendWhatsApp(String s) {
+        Intent sendIntent = new Intent(Intent.ACTION_SEND);
+        sendIntent.setType("text/plain");
+        sendIntent.setPackage("com.whatsapp");
+        if(sendIntent != null) {
+            sendIntent.putExtra(Intent.EXTRA_TEXT, s);
+            startActivity(Intent.createChooser(sendIntent, "Share with"));
+        } else {
+            Toast.makeText(this, "WhatsApp not installed", Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -72,4 +89,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         emailTextInput.setText("");
         passwordTextInput.setText("");
     }
+
 }
